@@ -5,7 +5,7 @@ from mpl_toolkits.mplot3d import axes3d
 # начальные условия в СИ
 aem = 1.66 * 10**-27
 q = 1.6 * 10**-19
-Ex, Ey, Ez = 0, 0, 0
+Ex = Ey = Ez = 0 # тк воздействует только магнитное поле
 Bx, By, Bz = 0.01, 0, 0  # ИНДУКЦИЯ
 
 x, y, z = [], [], []
@@ -42,7 +42,7 @@ for mass in range(20, 25):
 # 2D график
 plt.xlabel("x")
 plt.ylabel("y")
-plt.title('Bx = 0.01, By = 0.025, Bz = 0.015\nVx[0] = 500, Vy[0] = 1000')
+plt.title('Bx = {}, By = {}, Bz = {}\nVx[0] = {}, Vy[0] = {}, Vz[0] = {}'.format(Bx, By, Bz, Ux[0], Uy[0], Uz[0]))
 plt.legend(loc="lower center")
 
 # 3D график
